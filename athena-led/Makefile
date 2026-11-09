@@ -13,7 +13,9 @@ PKG_LICENSE:=Apache-2.0
 PKG_LICENSE_FILES:=LICENSE
 
 PKG_SOURCE:=athena-led-aarch64-unknown-linux-musl-v$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://github.com/unraveloop/JDC-AX6600-Athena-LED-Controller/releases/download/v$(PKG_VERSION)/
+# 🌟 修复：产物改从本仓库（zcracker 维护版）发布，与源码同源。
+# 原地址 unresloop 仓库的 v2.5.0 从未发布过 asset，导致 404 编译失败。
+PKG_SOURCE_URL:=https://github.com/zcracker/JDC-AX6600-Athena-LED-Controller/releases/download/v$(PKG_VERSION)/
 PKG_HASH:=skip
 
 include $(INCLUDE_DIR)/package.mk
